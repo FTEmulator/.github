@@ -1,4 +1,4 @@
-# FTHemulator
+# FTEmulator
 
 **Aplicación web para compra/venta de acciones de forma ficticia, sin riesgo de perder patrimonio real.**
 
