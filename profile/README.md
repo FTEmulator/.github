@@ -10,7 +10,7 @@ Brindar a estudiantes o personas interesadas en la inversión bursátil una plat
 
 ---
 
-## ⚙Características principales
+## Características principales
 
 - Simulación de compra y venta de acciones en bolsa.
 - Gestión de cartera (wallet) con historial y balance.
