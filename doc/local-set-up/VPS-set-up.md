@@ -20,7 +20,7 @@ Y para comprobar la versión y que esté todo bien:
 sudo docker version
 ```
 
-# Instalar cri-dockerd  
+# Instalar cri-docked  
 Es un adaptador que permite utilizar Docker en Kubernetes  
 - ref: https://mirantis.github.io/cri-dockerd/usage/install/
 
