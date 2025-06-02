@@ -4,6 +4,32 @@
 - Al menos 2 núcleos de CPU  
 - Conexión a Internet
 
+# Ip estatica
+```bash
+nano /etc/netplan/50-cloud-init.yaml
+```
+```yaml
+network:
+  version: 2
+  renderer: networkd
+  ethernets:
+    eth0:
+      dhcp4: no
+      addresses:
+        - 192.168.1.100/24
+      routes:
+        - to: default
+          via: 192.168.1.1
+      nameservers:
+        addresses:
+          - 8.8.8.8
+          - 8.8.4.4
+```
+
+```bash
+sudo netplan apply
+```
+
 # Instalar Docker
 - ref: https://docs.docker.com/engine/install/ubuntu/
 
@@ -38,14 +64,14 @@ sudo systemctl enable --now cri-docker.socket
 **minikube**: https://minikube.sigs.k8s.io/docs/start/?arch=%2Fwindows%2Fx86-64%2Fstable%2F.exe+download  
 **kubeadm y kubelet**: https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/install-kubeadm/
 
-# Creación del cluster de Kubernetes  
+<!-- # Creación del cluster de Kubernetes  
 - ref: https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/create-cluster-kubeadm/
 
 ```bash
 echo "net.ipv4.ip_forward=1" | sudo tee -a /etc/sysctl.conf
 sudo sysctl -p
 
-sudo kubeadm init      --apiserver-advertise-address=192.168.1.200      --pod-network-cidr=192.168.0.0/16      --cri-socket=unix:///var/run/cri-dockerd.sock
+sudo kubeadm init --apiserver-advertise-address=192.168.1.200 --pod-network-cidr=192.168.0.0/16 --cri-socket=unix:///var/run/cri-dockerd.sock
 ```
 
 # Archivo de conexión  
@@ -71,7 +97,7 @@ Calico es un plugin de red el cual usaremos para que los pods se puedan comunica
 ```bash
 curl https://raw.githubusercontent.com/projectcalico/calico/v3.30.0/manifests/calico.yaml -O
 kubectl apply -f calico.yaml
-```
+``` -->
 
 ## Abrir puertos necesarios del firewall  
 ```bash
@@ -87,19 +113,15 @@ sudo ufw allow from 192.168.0.0/16
 
 ## Aplicar cambios del firewall  
 ```bash
+sudo ufw enable
 sudo ufw reload
 ```
-
+<!-- 
 ## Verificar si está todo correcto  
 ```bash
 kubectl get nodes
 kubectl get pods --all-namespaces
-```
+``` -->
 
-# ¡¡¡ IMPORTANTE !!!  
-En caso de hacer algún fallo y querer repetir el cluster poner lo siguiente:  
-```bash
-kubeadm reset -f
-rm -rf ~/.kube /etc/kubernetes /var/lib/etcd /var/lib/kubelet /etc/cni/net.d /var/lib/cni
-systemctl restart kubelet
-```
+# Proximo paso
+Preparar para usar terraform: ./TF-set-up.me
