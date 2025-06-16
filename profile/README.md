@@ -4,7 +4,7 @@
 
 ---
 
-# [Documentacion](https://ftemulator.gitbook.io/ftemulator-docs) [==URL==]
+# [Documentacion](https://ftemulator.gitbook.io/ftemulator-docs) 🔗
 
 ---
 
