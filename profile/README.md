@@ -4,7 +4,8 @@
 
 ---
 
-# [Documentacion][https://ftemulator.gitbook.io/ftemulator-docs]
+# Documentación
+[Documentacion][https://ftemulator.gitbook.io/ftemulator-docs]
 
 ---
 
