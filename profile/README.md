@@ -4,6 +4,10 @@
 
 ---
 
+# [Documentacion][https://ftemulator.gitbook.io/ftemulator-docs]
+
+---
+
 ## Objetivo
 
 Brindar a estudiantes o personas interesadas en la inversión bursátil una plataforma donde puedan simular operaciones en el mercado de manera realista, sin exponerse a riesgos financieros.
