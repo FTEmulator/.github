@@ -14,6 +14,17 @@ Brindar a estudiantes o personas interesadas en la inversión bursátil una plat
 
 ---
 
+# Estado actual de FTEmulator
+El proyecto estara parado un tiempo mientras asquiero conocimientos en rust y de este modo poder desarrollar una infraestructura mas rapida.
+
+## Lo que esta desarrollado
+- Web con login y registro
+- Api orquestadora
+- Servicio de usuarios
+- Servicio de autenticación mediante JWT
+- Despliegue con terraform mediante k3s
+
+<!-- 
 ## Características principales
 
 - Simulación de compra y venta de acciones en bolsa.
@@ -53,15 +64,16 @@ Actualmente solo se contempla un tipo de usuario:
 ---
 
 ## Requisitos no funcionales
-
+[
 - Escalabilidad del sistema para soportar múltiples usuarios simultáneamente.
 - Seguridad a nivel de comunicaciones y autenticación:
   - HTTPS
   - JWT (JSON Web Tokens)
-  - OAuth2
+  - OAuth2](url)
 
 ---
 
 ## Restricciones técnicas
 
 - Los precios de las acciones se mostrarán con un **retraso de 15 minutos**, debido a restricciones legales sobre el uso de datos bursátiles en tiempo real.
+ -->
